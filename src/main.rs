@@ -1,5 +1,7 @@
 use std::io;
 use std::process::{exit, Command};
+use names::Generator;
+// use names::Generator;
 
 fn main() {
     update_commit_push();
@@ -43,5 +45,8 @@ fn name_generator() -> String {
     println!("Write the commit message here: \n"  );
     io::stdin().read_line(&mut input).expect("Failed to read line");
     input
+
+    // let mut generator = Generator::default();
+    // generator.next().unwrap()
 
 }
